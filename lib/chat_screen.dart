@@ -13,7 +13,7 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _controller = TextEditingController();
-  final List<ChatMessage> _messages = [];
+  final List<MessagesWidget> _messages = [];
   ChatGPT? chatGPT;
   StreamSubscription? _subscription;
   bool _isTyping = false;
@@ -37,7 +37,7 @@ class _ChatScreenState extends State<ChatScreen> {
   void _sendMessage() {
     if (_controller.text.isEmpty) return;
 
-    final message = ChatMessage(
+    final message = MessagesWidget(
       text: _controller.text,
       sender: "me",
     );
@@ -61,7 +61,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void insertNewData(String response) {
-    final botMessage = ChatMessage(
+    final botMessage = MessagesWidget(
       text: response,
       sender: "chat gpt",
     );
