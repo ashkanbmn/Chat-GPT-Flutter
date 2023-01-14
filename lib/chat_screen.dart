@@ -92,7 +92,7 @@ class _ChatScreenState extends State<ChatScreen> {
             children: [
               Card(
                 elevation: 8,
-                shape: StadiumBorder(),
+                shape: const StadiumBorder(),
                 child: IconButton(
                   icon: const Icon(Icons.send),
                   onPressed: () {
@@ -117,7 +117,7 @@ class _ChatScreenState extends State<ChatScreen> {
             Flexible(
               child: ListView.builder(
                 reverse: true,
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 itemCount: _messages.length,
                 itemBuilder: (context, index) {
                   return _messages[index];
