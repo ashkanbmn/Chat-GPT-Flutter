@@ -17,13 +17,13 @@ class _ChatScreenState extends State<ChatScreen> {
   ChatGPT? chatGPT;
   StreamSubscription? _subscription;
   bool _isTyping = false;
-  String yourApiKey = "Your Api Key";
+  String apiKey = "YourApiKey";
 
   @override
   void initState() {
     super.initState();
     chatGPT = ChatGPT.instance.builder(
-      yourApiKey,
+      apiKey,
     );
   }
 
